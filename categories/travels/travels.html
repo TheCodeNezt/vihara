@@ -68,6 +68,7 @@
   </div>
 
   <script src="../../js/live-status.js"></script>
+  <script src="../../js/whatsapp.js"></script>
   <script>
     async function loadTravelsData() {
       const container = document.getElementById('travelsList');
@@ -93,8 +94,8 @@
                 </a>
                 <p><i class="fas fa-map-marker-alt"></i> ${shop.location}</p>
                 <div class="btn-row">
-                  <a href="tel:${shop.phone}" class="btn-action btn-call btn-icon" title="Call"><i class="fas fa-phone"></i></a>
-                  <a href="https://wa.me/${(shop.phone||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hi, I found ' + shop.name + ' on Vihara. I would like to know more.')}" target="_blank" class="btn-action btn-wa btn-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="javascript:void(0)" data-call="${shop.phone||''}" data-call-name="${(shop.name||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" class="btn-action btn-call btn-icon" title="Call"><i class="fas fa-phone"></i></a>
+                  <a href="javascript:void(0)" data-wa="${shop.phone||''}" data-wa-name="${(shop.name||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" class="btn-action btn-wa btn-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                   <a href="travels_details.html?id=${shop.id}" class="btn-action btn-map">Details</a>
                 </div>
               </div>

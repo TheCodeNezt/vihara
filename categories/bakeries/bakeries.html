@@ -79,6 +79,7 @@
   </div>
 
   <script src="../../js/live-status.js"></script>
+  <script src="../../js/whatsapp.js"></script>
   <script>
     async function loadBakeryData() {
       const container = document.getElementById('bakeryList');
@@ -115,8 +116,8 @@
                 <p style="color:#666; font-size:0.85rem; margin-top:10px;">${shop.description}</p>
                 
                 <div class="card-actions">
-                  <a href="tel:${shop.phone}" onclick="event.stopPropagation()" class="mini-btn mini-call" title="Call"><i class="fas fa-phone"></i></a>
-                  <a href="https://wa.me/${(shop.phone||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hi, I found ' + shop.name + ' on Vihara. I would like to know more.')}" target="_blank" onclick="event.stopPropagation()" class="mini-btn mini-wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="javascript:void(0)" data-call="${shop.phone||''}" data-call-name="${(shop.name||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" onclick="event.stopPropagation()" class="mini-btn mini-call" title="Call"><i class="fas fa-phone"></i></a>
+                  <a href="javascript:void(0)" data-wa="${shop.phone||''}" data-wa-name="${(shop.name||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" onclick="event.stopPropagation()" class="mini-btn mini-wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                   <a href="${detailUrl}" onclick="event.stopPropagation()" class="mini-btn mini-view">View Details <i class="fas fa-arrow-right" style="font-size:0.8rem; margin-left:5px;"></i></a>
                 </div>
               </div>

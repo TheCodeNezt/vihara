@@ -55,12 +55,12 @@
         <h1 class="shop-name" id="shopName">...</h1>
         <p style="color:#666; margin-bottom:15px;" id="shopDesc">...</p>
         
-        <a href="#" id="btnWhatsapp" class="btn-whatsapp">
+        <a href="javascript:void(0)" id="btnWhatsapp" class="btn-whatsapp">
           <i class="fab fa-whatsapp"></i> Chat on WhatsApp
         </a>
 
         <div class="action-row">
-          <a href="#" id="btnCall" class="btn btn-outline"><i class="fas fa-phone"></i> Call</a>
+          <a href="javascript:void(0)" id="btnCall" class="btn btn-outline"><i class="fas fa-phone"></i> Call</a>
           <a href="#" id="btnNavigate" target="_blank" class="btn btn-primary"><i class="fas fa-directions"></i> Map</a>
         </div>
       </div>
@@ -72,6 +72,7 @@
     </div>
   </div>
 
+  <script src="../../js/whatsapp.js"></script>
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const shopId = parseInt(urlParams.get('id'));
@@ -100,18 +101,16 @@
       const waBtn = document.getElementById('btnWhatsapp');
       const callBtn = document.getElementById('btnCall');
 
-      const shopDigits = (shop.phone || '').replace(/[^0-9]/g, '');
-      const msg = encodeURIComponent(`Hi, I found *${shop.name}* on Vihara. I would like to know more.`);
+      // Both buttons stay clickable: the shared helper opens WhatsApp / dials
+      // when a number exists, or shows a "number not added yet" popup if it's
+      // missing.
+      waBtn.setAttribute('data-wa', shop.phone || '');
+      waBtn.setAttribute('data-wa-name', shop.name || '');
+      waBtn.style.opacity = "1";
 
-      if (shopDigits) {
-        waBtn.href = `https://wa.me/${shopDigits}?text=${msg}`;
-        waBtn.style.opacity = "1";
-        callBtn.href = `tel:+${shopDigits}`;
-        callBtn.style.opacity = "1";
-      } else {
-        waBtn.style.opacity = "0.5"; waBtn.style.pointerEvents = "none";
-        callBtn.style.opacity = "0.5"; callBtn.style.pointerEvents = "none";
-      }
+      callBtn.setAttribute('data-call', shop.phone || '');
+      callBtn.setAttribute('data-call-name', shop.name || '');
+      callBtn.style.opacity = "1";
 
       // Map Logic
       const navBtn = document.getElementById('btnNavigate');

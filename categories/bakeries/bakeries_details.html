@@ -91,7 +91,7 @@
     </div>
 
     <div class="action-row">
-      <a href="#" id="btnCall" class="btn-action btn-call">
+      <a href="javascript:void(0)" id="btnCall" class="btn-action btn-call">
         <i class="fas fa-phone-alt"></i> Call Now
       </a>
       <a href="#" id="btnNav" target="_blank" class="btn-action btn-nav">
@@ -111,11 +111,12 @@
   </div>
 
   <div class="sticky-footer">
-    <a href="#" id="waLink" class="btn-order" target="_blank">
+    <a href="javascript:void(0)" id="waLink" class="btn-order">
       <i class="fab fa-whatsapp"></i> Chat on WhatsApp
     </a>
   </div>
 
+  <script src="../../js/whatsapp.js"></script>
   <script>
     async function loadDetails() {
       // 1. Get ID from URL
@@ -141,9 +142,11 @@
           document.getElementById('shopLoc').innerText = shop.location;
           document.getElementById('shopDesc').innerText = shop.description;
           
-          // --- NEW: SET ACTION BUTTONS ---
-          // Phone
-          document.getElementById('btnCall').href = `tel:${shop.phone}`;
+          // --- SET ACTION BUTTONS ---
+          // Phone — helper dials if a number exists, else shows the popup.
+          const callEl = document.getElementById('btnCall');
+          callEl.setAttribute('data-call', shop.phone || '');
+          callEl.setAttribute('data-call-name', shop.name || '');
           
           // Map (If map_link is missing in JSON, create a Google Search link)
           const mapUrl = shop.map_link ? shop.map_link : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(shop.name + " Shravanabelagola")}`;
@@ -153,10 +156,11 @@
           const menuSource = shop.menu_image ? shop.menu_image : "";
           document.getElementById('menuImg').src = menuSource;
 
-          // Set WhatsApp link — connect visitor directly to the shop
-          const waDigits = (shop.phone || '').replace(/[^0-9]/g, '');
-          const msg = `Hi, I found *${shop.name}* on Vihara. I would like to know more.`;
-          document.getElementById('waLink').href = `https://wa.me/${waDigits}?text=${encodeURIComponent(msg)}`;
+          // Set WhatsApp — the shared helper opens the chat if a number exists,
+          // or shows a "number not added yet" popup if it's missing.
+          const waEl = document.getElementById('waLink');
+          waEl.setAttribute('data-wa', shop.phone || '');
+          waEl.setAttribute('data-wa-name', shop.name || '');
         } 
       } catch (error) {
         console.error("Error loading details:", error);

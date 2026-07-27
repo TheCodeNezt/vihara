@@ -12,10 +12,10 @@
     "address": "Main Road, Shravanabelagola",
     "mapUrl": "http://maps.google.com/?q=Nethravathi+General+Store+Shravanabelagola",
     "products": [
-      { "name": "Organic Rice (1kg)", "price": "₹60" },
-      { "name": "Sugar (1kg)", "price": "₹45" },
-      { "name": "Sunflower Oil (1L)", "price": "₹135" },
-      { "name": "Mixed Spices Pack", "price": "₹80" }
+      { "name": "Organic Rice " },
+      { "name": "Sugar " },
+      { "name": "Sunflower Oil " },
+      { "name": "Mixed Spices Pack" }
     ]
   },
   {
@@ -31,10 +31,10 @@
     "address": "B M Road, Shravanabelagola",
     "mapUrl": "http://maps.google.com/?q=Sri+Veerabhadreshwara+Traders+Shravanabelagola",
     "products": [
-      { "name": "Local Spices Pack", "price": "₹120" },
-      { "name": "Dry Fruits Mix (200g)", "price": "₹250" },
-      { "name": "Jaggery Cubes (1kg)", "price": "₹65" },
-      { "name": "Filter Coffee Powder (250g)", "price": "₹180" }
+      { "name": "Local Spices Pack" },
+      { "name": "Dry Fruits Mix " },
+      { "name": "Jaggery Cubes " },
+      { "name": "Filter Coffee Powder " }
     ]
   },
   {
@@ -50,10 +50,10 @@
     "address": "B M Road, Shravanabelagola",
     "mapUrl": "http://maps.google.com/?q=Sanjay+Provision+Store+Shravanabelagola",
     "products": [
-      { "name": "Toor Dal (1kg)", "price": "₹145" },
-      { "name": "Masala Powder Combo", "price": "₹55" },
-      { "name": "Assorted Snacks", "price": "₹30" },
-      { "name": "Dishwash Bar (Pack of 3)", "price": "₹45" }
+      { "name": "Toor Dal " },
+      { "name": "Masala Powder Combo" },
+      { "name": "Assorted Snacks" },
+      { "name": "Dishwash Bar " }
     ]
   },
   {
@@ -69,10 +69,10 @@
     "phone": "+91 9900995560",
     "mapUrl": "http://maps.google.com/?q=Padmavathi+Stores+Shravanabelagola",
     "products": [
-      { "name": "Wheat Flour / Atta (5kg)", "price": "₹220" },
-      { "name": "Ragi Flour (1kg)", "price": "₹55" },
-      { "name": "Cooking Oil (1L)", "price": "₹130" },
-      { "name": "Tea Powder (250g)", "price": "₹110" }
+      { "name": "Wheat Flour / Atta " },
+      { "name": "Ragi Flour " },
+      { "name": "Cooking Oil " },
+      { "name": "Tea Powder " }
     ]
   },
   {
@@ -88,10 +88,9 @@
     "phone": "+91 9731671672",
     "mapUrl": "http://maps.google.com/?q=Sri+Ranganatha+General+Stores+Shravanabelagola",
     "products": [
-      { "name": "Sunflower Oil (1L)", "price": "₹135" },
-      { "name": "Glucose Biscuits", "price": "₹10" },
-      { "name": "Soft Drink (750ml)", "price": "₹40" },
-      { "name": "School Stationery Kit", "price": "₹85" }
+      { "name": "Sunflower Oil " },
+      { "name": "Glucose Biscuits" },
+      { "name": "Soft Drink " }
     ]
   },
   {
@@ -107,10 +106,10 @@
     "phone": "+91 9483882133",
     "mapUrl": "http://maps.google.com/?q=Balaji+Bhandar+Shravanabelagola",
     "products": [
-      { "name": "Sugar (1kg)", "price": "₹45" },
-      { "name": "Crystal Salt (1kg)", "price": "₹20" },
-      { "name": "Bathing Soap", "price": "₹35" },
-      { "name": "Detergent Powder (500g)", "price": "₹60" }
+      { "name": "Sugar " },
+      { "name": "Crystal Salt " },
+      { "name": "Bathing Soap" },
+      { "name": "Detergent Powder " }
     ]
   },
   {
@@ -126,10 +125,10 @@
     "phone": "+91 9481986935",
     "mapUrl": "https://maps.app.goo.gl/PtSGXSv4cJTYQqq56",
     "products": [
-      { "name": "Tea Powder (250g)", "price": "₹110" },
-      { "name": "Instant Noodles Pack", "price": "₹14" },
-      { "name": "Milk Biscuit Pack", "price": "₹10" },
-      { "name": "Shampoo Sachet (Strip)", "price": "₹40" }
+      { "name": "Tea Powder (250g)" },
+      { "name": "Instant Noodles Pack" },
+      { "name": "Milk Biscuit Pack" },
+      { "name": "Shampoo Sachet " }
     ]
   },
   {
@@ -145,10 +144,10 @@
     "phone": "+91 9972281484",
     "mapUrl": "https://maps.app.goo.gl/dL7gq1E96zdCj5z86",
     "products": [
-      { "name": "Salt Packet (1kg)", "price": "₹20" },
-      { "name": "Turmeric Powder (100g)", "price": "₹35" },
-      { "name": "Mustard Seeds (100g)", "price": "₹20" },
-      { "name": "Matchbox Bundle", "price": "₹15" }
+      { "name": "Salt Packet " },
+      { "name": "Turmeric Powder " },
+      { "name": "Mustard Seeds " },
+      { "name": "Matchbox Bundle" }
     ]
   }
 ]
